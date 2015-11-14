@@ -13,7 +13,9 @@ class TasksViewController: UIViewController {
     var tasks = ["Jump", "Walk", "Talk"] // baby activities
     var titleLabel = UILabel();
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        printNSUser(self)
         self.navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "barButtonItemClicked:"), animated: true) // add bbutton on bar
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.blackColor()
         // init the label for nav bar title
@@ -59,6 +61,17 @@ class TasksViewController: UIViewController {
                 let child = NSKeyedUnarchiver.unarchiveObjectWithData(childData) as? Child
                 if child != nil {
                     print("\(child!.name) \(child!.weight) \(child!.birthday.description)")
+                    if child?.autistic == true {
+                        print("child is autistic")
+                    } else {
+                        print("child is not autistic")
+                    }
+                    
+                    if(child?.dyslexia == true) {
+                        print("child has dyslexia")
+                    } else {
+                        print("child does not have dyslexia")
+                    }
                 }
             }
             

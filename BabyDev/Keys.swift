@@ -13,4 +13,8 @@ struct Keys {
     static let ChildName = "child_name"
     static let ChildWeight = "child_weight"
     static let ChildBirthday = "child_birthday"
+    static let has_autistic = "has_autistic"
+    static let has_dyslexia = "has_dyslexia"
+    static let gender = "gender"
+
 }

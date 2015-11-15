@@ -11,26 +11,37 @@ import UIKit
 class CreateChildProfileViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var weightTextField: UITextField!
-    @IBOutlet weak var birthdayPicker: UIDatePicker!
-    weak var delegate: CreateChildViewControllerDelegate!
+    weak var delegate: CreateChildViewControllerDelegate?
     @IBOutlet weak var autisticSwitch: UISwitch!
     @IBOutlet weak var dyslexiaSwitch: UISwitch!
+
     @IBOutlet weak var genderSegment: UISegmentedControl!
+    
+    @IBOutlet weak var dyscallculiaSwitch: UISwitch!
+    @IBOutlet weak var dateField: UITextField!
     var titleLabel = UILabel();
     var gender = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+            var background = UIImage(imageLiteral: "iphone5_ios7.jpg")
+            var backgroundImage = UIImageView.init(frame: self.view.frame)
+        
+    
+        backgroundImage.image = background
+        self.view.insertSubview(backgroundImage, atIndex: 0)
+        
+        
         gender = "Male"
         autisticSwitch.on = false
         dyslexiaSwitch.on  = false
+        dyscallculiaSwitch.on  = false
+
         self.view.backgroundColor = UIColor.whiteColor()
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         self.view.addGestureRecognizer(tapGestureRecognizer)
         nameTextField.delegate = self
-        weightTextField.delegate = self
-        birthdayPicker.datePickerMode = UIDatePickerMode.Date
         self.navigationController?.navigationBarHidden = false
         
         // init the label for nav bar title
@@ -44,11 +55,13 @@ class CreateChildProfileViewController: UIViewController {
         titleLabel.text = "Set Baby Profile"
         titleLabel.textAlignment = .Center
         (titleLabel.sizeToFit())
+        dateField.delegate = self
         self.navigationItem.titleView = titleLabel
-    self.navigationController?.navigationBar.configureFlatNavigationBarWithColor(UIColor.peterRiverColor())
+    self.navigationController?.navigationBar.configureFlatNavigationBarWithColor(UIColor.clearColor())
         
         genderSegment.setTitle("Male", forSegmentAtIndex: 0)
         genderSegment.setTitle("Female", forSegmentAtIndex: 1)
+        
     }
     
     @IBAction func segmentedPressed(sender: AnyObject){
@@ -86,7 +99,8 @@ class CreateChildProfileViewController: UIViewController {
             for childData in childProfiles {
                 let child = NSKeyedUnarchiver.unarchiveObjectWithData(childData) as? Child
                 if child != nil {
-                    print("\(child!.name) \(child!.weight) \(child!.birthday.description)")
+                    
+                    print("\(child!.name) \(child!.birthday.description)")
                 }
             }
             
@@ -98,11 +112,10 @@ class CreateChildProfileViewController: UIViewController {
     @IBAction func submitProfileInfo(sender: AnyObject) {
         
         if nameTextField.text == "" { print("name text field empty"); return }
-        if let weight = NSNumberFormatter().numberFromString(weightTextField.text!)?.doubleValue {
-            
+        
             var isAutistic: Bool
             var isDyslexia: Bool
-            
+            var dyscall: Bool
             if autisticSwitch.on {
                 isAutistic = true
             }
@@ -118,25 +131,41 @@ class CreateChildProfileViewController: UIViewController {
                 isDyslexia = false
                 print("not dys")
             }
-            
+        if dyscallculiaSwitch.on {
+            dyscall = true
+        }
+        else {
+            dyscall = false
+            print("not dys")
+        }
+        
             print("gender is \(gender)")
+        
+        
+        var dateString = dateField.text
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        let date = dateFormatter.dateFromString(dateString!)
             
-            let newChild = Child(name: nameTextField.text!, weight: weight, birthday: birthdayPicker.date, autistic: isAutistic,dyslexia: isDyslexia,gender: self.gender)
+        let newChild = Child(name: nameTextField.text!, birthday: date!, autistic: isAutistic,dyslexia: isDyslexia, dyscall: dyscall ,gender: self.gender)
             
-            var profiles = NSUserDefaults.standardUserDefaults().arrayForKey(Keys.ChildProfiles) as? [NSData]
-            if profiles == nil {
-                var arrayData = [NSData]()
-                let archivedData = NSKeyedArchiver.archivedDataWithRootObject(newChild)
-                arrayData.append(archivedData)
-                NSUserDefaults.standardUserDefaults().setObject(arrayData, forKey: Keys.ChildProfiles)
-            } else {
-                profiles!.append(NSKeyedArchiver.archivedDataWithRootObject(newChild))
-                NSUserDefaults.standardUserDefaults().setObject(profiles!, forKey: Keys.ChildProfiles)
-            }
-            delegate.presentTasksViewController()
+        var profiles = NSUserDefaults.standardUserDefaults().arrayForKey(Keys.ChildProfiles) as? [NSData]
+        var archivedChild = NSKeyedArchiver.archivedDataWithRootObject(newChild)
+        if profiles == nil {
+            var arrayData = [NSData]()
+            arrayData.append(archivedChild)
+            NSUserDefaults.standardUserDefaults().setObject(arrayData, forKey: Keys.ChildProfiles)
         } else {
-            print("Weight invalid")
-            return
+            profiles!.append(archivedChild)
+            NSUserDefaults.standardUserDefaults().setObject(profiles!, forKey: Keys.ChildProfiles)
+        }
+        NSUserDefaults.standardUserDefaults().setObject(archivedChild, forKey: Keys.CurrentChild)
+        delegate?.presentTasksViewController()
+        if delegate == nil {
+            var viewstack = self.navigationController?.viewControllers
+            var index = viewstack!.count - 2
+            (viewstack![index] as! ChildrenViewController).childrenTableView.reloadData()
+            self.navigationController?.popViewControllerAnimated(true)
         }
         //could validate date as well
     }
@@ -149,8 +178,7 @@ protocol CreateChildViewControllerDelegate: class {
 extension CreateChildProfileViewController: UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         switch textField {
-        case nameTextField: weightTextField.becomeFirstResponder()
-        case weightTextField: dismissKeyboard()
+        case nameTextField: self.view.endEditing(true)
         default: break
         }
         return true

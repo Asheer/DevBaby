@@ -17,15 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CreateChildViewController
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         var initialViewController: UIViewController!
-        
         let defaults = NSUserDefaults.standardUserDefaults()
+        //defaults.setObject(nil, forKey: Keys.ChildProfiles)
         if let childProfiles = defaults.arrayForKey(Keys.ChildProfiles) as? [NSData] {
             initialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("tasksVC")
+            print("Going to tasks")
             /*for childData in childProfiles {
                 let child = NSKeyedUnarchiver.unarchiveObjectWithData(childData) as? Child
             }*/
 
         } else {
+            print("Going to create")
             /*let array = [Child(name: "Tucker", weight: 19.2, birthday: NSDate()), Child(name: "Max", weight: 1.2, birthday: NSDate())]
             var arrayData = [NSData]()
             for child in array {
@@ -37,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CreateChildViewController
             (initialViewController as! CreateChildProfileViewController).delegate = self
         }
         let navCont = UINavigationController(rootViewController: initialViewController)
+        navCont.navigationBarHidden = true
         window?.rootViewController = navCont
         window?.makeKeyAndVisible()
         

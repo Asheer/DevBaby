@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801666561BF80FF4000A9023 /* Task1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801666551BF80FF4000A9023 /* Task1.swift */; };
 		802A365F1BF7829600294707 /* UINavigationBar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 802A365C1BF7829600294707 /* UINavigationBar+FlatUI.m */; };
 		802A36601BF7829600294707 /* UITableViewCell+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 802A365E1BF7829600294707 /* UITableViewCell+FlatUI.m */; };
 		802A36631BF782A300294707 /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 802A36621BF782A300294707 /* UIColor+FlatUI.m */; };
 		802A36661BF7834900294707 /* FUICellBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 802A36651BF7834900294707 /* FUICellBackgroundView.m */; };
 		802A36691BF7836300294707 /* UIImage+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 802A36681BF7836300294707 /* UIImage+FlatUI.m */; };
+		808D54F91BF8580600B66139 /* TasksDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808D54F81BF8580600B66139 /* TasksDetailViewController.swift */; };
+		80DBDA891BF87D4E00863879 /* DevelopmentDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBDA881BF87D4E00863879 /* DevelopmentDictionary.swift */; };
+		80DBDA8B1BF89C0500863879 /* ChildrenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBDA8A1BF89C0500863879 /* ChildrenViewController.swift */; };
+		80DBDAC81BF8BE9600863879 /* iphone5_ios7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80DBDAC71BF8BE9600863879 /* iphone5_ios7.jpg */; };
+		80DBDACA1BF8CAE000863879 /* BEEDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DBDAC91BF8CAE000863879 /* BEEDViewController.swift */; };
+		80DBDACC1BF8CB8900863879 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DBDACB1BF8CB8900863879 /* Main.storyboard */; };
 		C4E53AE81BF7546D00FA1155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E53AE71BF7546D00FA1155 /* AppDelegate.swift */; };
-		C4E53AED1BF7546D00FA1155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E53AEB1BF7546D00FA1155 /* Main.storyboard */; };
 		C4E53AEF1BF7546D00FA1155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E53AEE1BF7546D00FA1155 /* Assets.xcassets */; };
 		C4E53AF21BF7546D00FA1155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E53AF01BF7546D00FA1155 /* LaunchScreen.storyboard */; };
 		C4E53AFD1BF7546D00FA1155 /* BabyDevTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E53AFC1BF7546D00FA1155 /* BabyDevTests.swift */; };
@@ -42,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		801666551BF80FF4000A9023 /* Task1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task1.swift; sourceTree = "<group>"; };
 		802A365A1BF7829500294707 /* BabyDev-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BabyDev-Bridging-Header.h"; sourceTree = "<group>"; };
 		802A365B1BF7829600294707 /* UINavigationBar+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+FlatUI.h"; sourceTree = "<group>"; };
 		802A365C1BF7829600294707 /* UINavigationBar+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+FlatUI.m"; sourceTree = "<group>"; };
@@ -53,9 +60,14 @@
 		802A36651BF7834900294707 /* FUICellBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUICellBackgroundView.m; sourceTree = "<group>"; };
 		802A36671BF7836300294707 /* UIImage+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FlatUI.h"; sourceTree = "<group>"; };
 		802A36681BF7836300294707 /* UIImage+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FlatUI.m"; sourceTree = "<group>"; };
+		808D54F81BF8580600B66139 /* TasksDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksDetailViewController.swift; sourceTree = "<group>"; };
+		80DBDA881BF87D4E00863879 /* DevelopmentDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopmentDictionary.swift; sourceTree = "<group>"; };
+		80DBDA8A1BF89C0500863879 /* ChildrenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenViewController.swift; sourceTree = "<group>"; };
+		80DBDAC71BF8BE9600863879 /* iphone5_ios7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphone5_ios7.jpg; sourceTree = "<group>"; };
+		80DBDAC91BF8CAE000863879 /* BEEDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEEDViewController.swift; sourceTree = "<group>"; };
+		80DBDACB1BF8CB8900863879 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C4E53AE41BF7546D00FA1155 /* BabyDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E53AE71BF7546D00FA1155 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4E53AEC1BF7546D00FA1155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4E53AEE1BF7546D00FA1155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4E53AF11BF7546D00FA1155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4E53AF31BF7546D00FA1155 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,8 +111,12 @@
 		C4E53ADB1BF7546D00FA1155 = {
 			isa = PBXGroup;
 			children = (
+				80DBDAC91BF8CAE000863879 /* BEEDViewController.swift */,
+				801666551BF80FF4000A9023 /* Task1.swift */,
 				C4E53B1B1BF75C1300FA1155 /* CreateChildProfileViewController.swift */,
 				C4E53B1D1BF75E9700FA1155 /* TasksViewController.swift */,
+				80DBDA8A1BF89C0500863879 /* ChildrenViewController.swift */,
+				808D54F81BF8580600B66139 /* TasksDetailViewController.swift */,
 				C4E53AE61BF7546D00FA1155 /* BabyDev */,
 				C4E53AFB1BF7546D00FA1155 /* BabyDevTests */,
 				C4E53B061BF7546E00FA1155 /* BabyDevUITests */,
@@ -121,15 +137,16 @@
 		C4E53AE61BF7546D00FA1155 /* BabyDev */ = {
 			isa = PBXGroup;
 			children = (
-				C4E53AE71BF7546D00FA1155 /* AppDelegate.swift */,
-				C4E53B151BF7556B00FA1155 /* Keys.swift */,
-				C4E53B191BF755B300FA1155 /* Child.swift */,
-				C4E53AEB1BF7546D00FA1155 /* Main.storyboard */,
 				C4E53AEE1BF7546D00FA1155 /* Assets.xcassets */,
 				C4E53AF01BF7546D00FA1155 /* LaunchScreen.storyboard */,
+				80DBDACB1BF8CB8900863879 /* Main.storyboard */,
 				802A365B1BF7829600294707 /* UINavigationBar+FlatUI.h */,
 				C4E53AF31BF7546D00FA1155 /* Info.plist */,
 				802A365C1BF7829600294707 /* UINavigationBar+FlatUI.m */,
+				C4E53AE71BF7546D00FA1155 /* AppDelegate.swift */,
+				80DBDA881BF87D4E00863879 /* DevelopmentDictionary.swift */,
+				C4E53B151BF7556B00FA1155 /* Keys.swift */,
+				C4E53B191BF755B300FA1155 /* Child.swift */,
 				802A365D1BF7829600294707 /* UITableViewCell+FlatUI.h */,
 				802A365E1BF7829600294707 /* UITableViewCell+FlatUI.m */,
 				802A36611BF782A300294707 /* UIColor+FlatUI.h */,
@@ -139,6 +156,7 @@
 				802A36641BF7834900294707 /* FUICellBackgroundView.h */,
 				802A36651BF7834900294707 /* FUICellBackgroundView.m */,
 				802A365A1BF7829500294707 /* BabyDev-Bridging-Header.h */,
+				80DBDAC71BF8BE9600863879 /* iphone5_ios7.jpg */,
 			);
 			path = BabyDev;
 			sourceTree = "<group>";
@@ -229,6 +247,7 @@
 				TargetAttributes = {
 					C4E53AE31BF7546D00FA1155 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 8X4J77ARY5;
 					};
 					C4E53AF71BF7546D00FA1155 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -265,9 +284,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80DBDAC81BF8BE9600863879 /* iphone5_ios7.jpg in Resources */,
 				C4E53AF21BF7546D00FA1155 /* LaunchScreen.storyboard in Resources */,
 				C4E53AEF1BF7546D00FA1155 /* Assets.xcassets in Resources */,
-				C4E53AED1BF7546D00FA1155 /* Main.storyboard in Resources */,
+				80DBDACC1BF8CB8900863879 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +315,13 @@
 				802A36661BF7834900294707 /* FUICellBackgroundView.m in Sources */,
 				802A36631BF782A300294707 /* UIColor+FlatUI.m in Sources */,
 				802A36691BF7836300294707 /* UIImage+FlatUI.m in Sources */,
+				80DBDA8B1BF89C0500863879 /* ChildrenViewController.swift in Sources */,
+				80DBDACA1BF8CAE000863879 /* BEEDViewController.swift in Sources */,
 				802A36601BF7829600294707 /* UITableViewCell+FlatUI.m in Sources */,
 				C4E53B161BF7556B00FA1155 /* Keys.swift in Sources */,
+				801666561BF80FF4000A9023 /* Task1.swift in Sources */,
+				808D54F91BF8580600B66139 /* TasksDetailViewController.swift in Sources */,
+				80DBDA891BF87D4E00863879 /* DevelopmentDictionary.swift in Sources */,
 				C4E53B1C1BF75C1300FA1155 /* CreateChildProfileViewController.swift in Sources */,
 				802A365F1BF7829600294707 /* UINavigationBar+FlatUI.m in Sources */,
 				C4E53B1E1BF75E9700FA1155 /* TasksViewController.swift in Sources */,
@@ -337,14 +362,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C4E53AEB1BF7546D00FA1155 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4E53AEC1BF7546D00FA1155 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C4E53AF01BF7546D00FA1155 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -392,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -430,7 +447,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -441,11 +458,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BabyDev/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gerardo.BabyDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BabyDev/BabyDev-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -455,11 +477,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BabyDev/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gerardo.BabyDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BabyDev/BabyDev-Bridging-Header.h";
 			};
 			name = Release;

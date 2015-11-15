@@ -16,13 +16,15 @@ class Child: NSObject, NSCoding {
     var autistic: Bool
     var dyslexia: Bool
     var dyscall: Bool
-    init(name: String, birthday: NSDate, autistic: Bool, dyslexia: Bool ,dyscall: Bool,gender: String) {
+    var adhd : Bool
+    init(name: String, birthday: NSDate, autistic: Bool, dyslexia: Bool ,dyscall: Bool,gender: String, adhd: Bool) {
         self.name = name
         self.birthday = birthday
         self.autistic = autistic
         self.dyslexia = dyslexia
         self.gender = gender
         self.dyscall = dyscall
+        self.adhd = adhd
     }
     required init?(coder aDecoder: NSCoder) {
         self.name = aDecoder.decodeObjectForKey(Keys.ChildName) as! String
@@ -33,7 +35,7 @@ class Child: NSObject, NSCoding {
         self.gender = aDecoder.decodeObjectForKey(Keys.gender) as! String
         print("spot 1.5")
         self.dyscall = aDecoder.decodeBoolForKey(Keys.has_dyscall) 
-
+        self.adhd = aDecoder.decodeBoolForKey(Keys.has_adhd)
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
@@ -43,6 +45,7 @@ class Child: NSObject, NSCoding {
         aCoder.encodeBool(dyslexia, forKey: Keys.has_dyslexia)
         aCoder.encodeObject(gender, forKey: Keys.gender)
         aCoder.encodeBool(dyscall, forKey: Keys.has_dyscall)
+        aCoder.encodeBool(adhd, forKey: Keys.has_adhd)
 
     }
 }

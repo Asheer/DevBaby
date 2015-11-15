@@ -43,9 +43,14 @@ class TasksDetailViewController: UIViewController, UITableViewDataSource, UITabl
         let monthsOld = components.month
         for task in tasks {
             if monthsOld >= task.minAge && monthsOld <= task.maxAge {
-                if currentChild.autistic == task.autistic || currentChild.dyscall == task.dyscalculia || currentChild.dyslexia == task.dyslexic {
+                if task.autistic == true {
+                    if currentChild.autistic == true {
+                        relevantTasks.append(task)
+                    }
+                } else {
                     relevantTasks.append(task)
                 }
+                
             }
         }
         

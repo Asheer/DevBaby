@@ -17,4 +17,6 @@ struct Keys {
     static let gender = "gender"
     static let has_dyscall = "dyscall"
     static let CurrentChild = "current_child"
+    static let has_adhd = "adhd"
+
 }

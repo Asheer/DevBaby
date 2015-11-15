@@ -17,6 +17,7 @@ class CreateChildProfileViewController: UIViewController {
 
     @IBOutlet weak var genderSegment: UISegmentedControl!
     
+    @IBOutlet weak var adhsSwitch: UISwitch!
     @IBOutlet weak var dyscallculiaSwitch: UISwitch!
     @IBOutlet weak var dateField: UITextField!
     var titleLabel = UILabel();
@@ -37,7 +38,7 @@ class CreateChildProfileViewController: UIViewController {
         autisticSwitch.on = false
         dyslexiaSwitch.on  = false
         dyscallculiaSwitch.on  = false
-
+        adhsSwitch.on = false
         self.view.backgroundColor = UIColor.whiteColor()
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         self.view.addGestureRecognizer(tapGestureRecognizer)
@@ -116,6 +117,7 @@ class CreateChildProfileViewController: UIViewController {
             var isAutistic: Bool
             var isDyslexia: Bool
             var dyscall: Bool
+            var adhd : Bool
             if autisticSwitch.on {
                 isAutistic = true
             }
@@ -138,6 +140,11 @@ class CreateChildProfileViewController: UIViewController {
             dyscall = false
             print("not dys")
         }
+        if adhsSwitch.on == true  {
+            adhd = true
+        } else  {
+            adhd = false
+        }
         
             print("gender is \(gender)")
         
@@ -147,7 +154,7 @@ class CreateChildProfileViewController: UIViewController {
         dateFormatter.dateFormat = "MM/dd/yyyy"
         let date = dateFormatter.dateFromString(dateString!)
             
-        let newChild = Child(name: nameTextField.text!, birthday: date!, autistic: isAutistic,dyslexia: isDyslexia, dyscall: dyscall ,gender: self.gender)
+        let newChild = Child(name: nameTextField.text!, birthday: date!, autistic: isAutistic,dyslexia: isDyslexia, dyscall: dyscall ,gender: self.gender, adhd: adhd)
             
         var profiles = NSUserDefaults.standardUserDefaults().arrayForKey(Keys.ChildProfiles) as? [NSData]
         var archivedChild = NSKeyedArchiver.archivedDataWithRootObject(newChild)
